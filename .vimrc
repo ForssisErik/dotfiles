@@ -1,8 +1,11 @@
 set nu
 set ruler
 set incsearch
+set cursorline
 
-set nocompatible              " be iMproved, required
+set shiftwidth=2
+set tabstop=4
+se nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -35,6 +38,8 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
 Plugin 'morhetz/gruvbox'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -50,6 +55,28 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+"
+" Settings for gruvbox
 set background=dark
 let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
+
+" NERDTree
+let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\.swp$','\.DS_Store', '\.class']
+let mapleader=','
+nnoremap <leader>ev :split $MYVIMRC<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
+
+" Better window navigation
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+" Stop using those damn arrows!
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+

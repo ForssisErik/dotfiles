@@ -96,6 +96,8 @@ alias l='ls -CF'
 alias gaddc='git add . && git commit -m "'
 alias gnome-terminal='gnome-terminal --full-screen'
 alias ,='cd ..'
+alias gstore='git config credential.helper cache --7200'
+alias gstoreexit='git credential-cache exit'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

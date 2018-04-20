@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+#Test for git
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -136,3 +138,13 @@ function parse_git_branch() {
 export PS1="\[\033[38;5;11m\]\\$\[$(tput sgr0)\]\[\033[38;5;26m\][\u]\[$(tput sgr0)\]\[\033[38;5;11m\]@\[$(tput sgr0)\]\[\033[38;5;3m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;11m\]\[\e[36m\]\`parse_git_branch\`\[\e[m\] >\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+
+# added by Anaconda3 installer
+export PATH="/home/erik/anaconda3/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# added by Anaconda3 installer
+export PATH="/home/erik/anaconda3/bin:$PATH"
